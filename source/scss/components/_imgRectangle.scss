@@ -1,7 +1,6 @@
 .imgRectangle {
   position: relative;
-  // 使用 block 讓 rectangle 佔滿圖片
-  display: block;
+  display: block; // 使用 block 讓 rectangle 佔滿圖片
   transition: 0.3s all ease;
 
   &::before {
@@ -14,8 +13,8 @@
 
     // 隱藏 rectangle
     visibility: hidden;
-    // 給 IE 使用的隱藏
-    opacity: 0;
+    opacity: 0; // 給 IE 使用的隱藏
+    
     background-color: rgba($black, .4);
     transition: 0.3s all ease;
   }

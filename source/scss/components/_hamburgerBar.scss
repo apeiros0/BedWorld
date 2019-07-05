@@ -4,9 +4,7 @@
   width: 100%;
   background-color: $white;
   padding: 1.25rem 0; // 20px
-
-  // 與黑屏同層 + 與內容重疊，所以有被蓋到
-  z-index: 2;
+  z-index: 2; // 與黑屏同層 + 與內容重疊，所以有被蓋到
 
   &__btn {
     position: absolute;

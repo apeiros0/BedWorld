@@ -7758,10 +7758,10 @@ html {
     right: 0;
     left: 0;
     bottom: 0;
-    visibility: hidden;
-    opacity: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 2; }
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0; }
   .mainContent--close::before {
     visibility: visible;
     opacity: 1; }
