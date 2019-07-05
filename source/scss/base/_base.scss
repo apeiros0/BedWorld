@@ -11,8 +11,7 @@ label {
 textarea.form-control,
 input[type="text"],
 input[type="email"] {
-  // close textarea resize
-  resize: none;
+  resize: none; // close textarea resize
   border: 2px solid $gray-400;
 
   &:focus {
@@ -26,7 +25,6 @@ input[type="email"] {
   padding: 1.25em 1.875rem; // 20px 30px
   letter-spacing: .1rem; // 1.6px
 }
-
 
 // * {
 //   outline: 1px solid red;

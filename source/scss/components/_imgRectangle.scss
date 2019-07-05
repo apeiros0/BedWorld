@@ -14,13 +14,13 @@
     // 隱藏 rectangle
     visibility: hidden;
     opacity: 0; // 給 IE 使用的隱藏
-    
+
     background-color: rgba($black, .4);
     transition: 0.3s all ease;
   }
 
   &:hover {
-    // 圖片縮小
+    // 圖片內縮
     padding: 0.625rem; // 10px
 
     &::before {
