@@ -1,0 +1,77 @@
+.mainContent__info {
+  padding: 7.875rem 0;
+
+  &__owl {
+    position: relative;
+
+    // owl-carousel setting
+    & .owl-nav {
+      // nav 定位
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      margin-top: -3.125rem; // -50px
+      margin-left: -0.3125rem; // -5px
+      margin-right: -0.3125rem;
+      z-index: 3;
+
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s all ease;
+
+      // button 定位
+      & .owl-prev,
+      & .owl-next {
+        position: absolute;
+        background: $primary;
+        color: $white;
+        padding: 1.25rem; // 20px
+        line-height: 0;
+
+        & > span {
+          font-size: 3.125rem; // 50px
+        }
+      }
+      & .owl-prev {
+        left: 0;
+      }
+      & .owl-next {
+        right: 0;
+      }
+    }
+
+    &:hover {
+      & .owl-nav {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    // dot position
+    & .owl-dots {
+      // 從 item 的底部開始計算
+      margin-top: 1.875rem;
+      display: flex;
+      justify-content: center;
+
+      // dot
+      & .owl-dot {
+        width: 0.625rem; // 10px
+        height: 0.625rem;
+        background-color: $gray-400;
+        border-radius: 50%;
+        // dot 的間距
+        margin: 0.625rem 0.3125rem;
+
+        &.active {
+          background-color: $primary;
+        }
+      }
+    }
+
+    &__content {
+      padding: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// bar
+.hamburger__bar {
+  position: fixed;
+  width: 100%;
+  background-color: $white;
+  padding: 1.25rem 0; // 20px
+
+  z-index: 2;
+
+  &__btn {
+    position: absolute;
+    left: 0;
+  }
+}
+
+// icon
+.fa-bars {
+  font-size: 1.5625rem; // 25px
+  cursor: pointer;
+}

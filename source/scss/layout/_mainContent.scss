@@ -1,0 +1,57 @@
+.mainContent {
+  // 用 100% - aside 寬度
+  width: calc(100% - 15.625rem);
+  float: right;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    // 向下推移 80px (hamburger bar height)
+    transform: translateY(5rem);
+  }
+
+  // mainContent 用黑屏擋住
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    visibility: hidden;
+    opacity: 0;
+
+    background-color: rgba($black, 0.7);
+    z-index: 2;
+  }
+
+  // 打開黑屏
+  &--close {
+    &::before {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+// Bootstrap
+// media-breakpoint-only (min-width and max-width)
+// media-breakpoint-up (min-width)
+// media-breakpoint-down (max-width)
+.card-columns {
+  // lg: 992px, xl: 1200px
+  // xs: 0px, sm: 576px, md: 768px
+  @include media-breakpoint-down(md) {
+    // 分成多少欄位
+    columns: 2;
+  }
+
+  @include media-breakpoint-down(sm) {
+    columns: 2;
+  }
+
+  @include media-breakpoint-down(xs) {
+    columns: 1;
+  }
+}

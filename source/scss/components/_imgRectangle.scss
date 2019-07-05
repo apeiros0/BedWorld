@@ -1,0 +1,34 @@
+.imgRectangle {
+  position: relative;
+  // 使用 block 讓 rectangle 佔滿圖片
+  display: block;
+  transition: 0.3s all ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    // 隱藏 rectangle
+    visibility: hidden;
+    // 給 IE 使用的隱藏
+    opacity: 0;
+    background-color: rgba($black, .4);
+    transition: 0.3s all ease;
+  }
+
+  &:hover {
+    // 圖片縮小
+    padding: 0.625rem; // 10px
+
+    &::before {
+      // 透過 margin 補回縮小時的寬度 (可以貼齊圖片)
+      margin: 0.625rem; // 20px
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

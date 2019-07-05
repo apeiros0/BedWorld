@@ -1,0 +1,95 @@
+.aside {
+  width: 15.625rem; // 250px
+  background-color: $white;
+
+  // 固定 footer logo
+  height: 100vh; // vh 代表 view height，是螢幕可視範圍高度的百分比
+  min-height: 34.375rem; // 550px
+  position: fixed;
+  top: 0;
+
+  transition: 0.3s all ease;
+  z-index: 3;
+
+  @include media-breakpoint-down(md) {
+    // aside 消失
+    transform: translateX(-15.625rem); // 250px
+    -webkit-transform: translateX(-15.625rem);
+  }
+
+  &--appear {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+}
+
+// close
+.aside__close {
+  font-size: $font-size-sm; // 14px
+  letter-spacing: 0.1em; // 文字間距
+
+  &__btn {
+    color: $black;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+// header
+.aside__header {
+  &__logo {
+    font-size: $font-size-lg; // 20px
+    text-decoration: none;
+    text-transform: uppercase; // 變成大寫
+    letter-spacing: 0.05em;
+    position: relative;
+  }
+
+  &__content {
+    font-size: $font-size-base; // 16px
+  }
+}
+
+// index
+.aside__index {
+  &__item {
+    margin-bottom: 0.625rem; // 10px
+    height: 1.875rem; // 30px
+
+    &__link {
+      color: $black;
+      padding-top: 0.1875rem; // 3px
+      padding-bottom: 0.1875rem; // 3px
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 0;
+        height: 0.125rem; // 2px
+        background-color: $primary;
+        transition: 0.3s width ease-out;
+      }
+
+      &:hover {
+        color: $black;
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &--active {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
