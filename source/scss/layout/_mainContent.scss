@@ -1,13 +1,12 @@
 .mainContent {
   // 用 100% - aside 寬度
   width: calc(100% - 15.625rem);
+  // 內容定位在右邊
   float: right;
   position: relative;
 
   @include media-breakpoint-down(md) {
     width: 100%;
-    // 向下推移 80px (hamburger bar height)
-    transform: translateY(5rem);
   }
 
   // mainContent 用黑屏擋住

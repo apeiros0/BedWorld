@@ -7750,9 +7750,7 @@ html {
   position: relative; }
   @media (max-width: 991.98px) {
     .mainContent {
-      width: 100%;
-      -ms-transform: translateY(5rem);
-          transform: translateY(5rem); } }
+      width: 100%; } }
   .mainContent::before {
     content: "";
     position: absolute;
