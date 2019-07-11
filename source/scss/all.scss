@@ -17,6 +17,7 @@
 @import "components/imgRectangle";
 @import "components/hamburgerBar";
 @import "components/infoCard";
+@import "components/cardColumn";
 
 
 // layout
@@ -26,5 +27,8 @@
 
 
 // page
-@import "pages/owl-carousel/core";
 @import "pages/mainContentInfo";
+
+
+// vendor
+@import "vendors/owl-carousel/core";

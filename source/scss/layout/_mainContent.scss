@@ -1,6 +1,6 @@
 .mainContent {
   width: calc(100% - 15.625rem); // 用 100% - aside 寬度
-  float: right; // 內容定位在右邊
+  // float: right; // 內容定位在右邊
   position: relative;
 
   @include media-breakpoint-down(md) {
@@ -27,26 +27,5 @@
       visibility: visible;
       opacity: 1;
     }
-  }
-}
-
-// Bootstrap
-// media-breakpoint-only (min-width and max-width)
-// media-breakpoint-up (min-width)
-// media-breakpoint-down (max-width)
-
-// lg: 992px, xl: 1200px
-// xs: 0px, sm: 576px, md: 768px
-.card-columns {
-  @include media-breakpoint-down(md) {
-    columns: 2; // 分成多少欄位
-  }
-
-  @include media-breakpoint-down(sm) {
-    columns: 2;
-  }
-
-  @include media-breakpoint-down(xs) {
-    columns: 1;
   }
 }

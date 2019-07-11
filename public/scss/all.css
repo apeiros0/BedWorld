@@ -7682,6 +7682,18 @@ html {
   .mainContent__info__card__header > .fas {
     color: #1FAD9F; }
 
+@media (max-width: 991.98px) {
+  .card-columns {
+    columns: 2; } }
+
+@media (max-width: 767.98px) {
+  .card-columns {
+    columns: 2; } }
+
+@media (max-width: 575.98px) {
+  .card-columns {
+    columns: 1; } }
+
 .aside {
   width: 15.625rem;
   background-color: #fff;
@@ -7746,7 +7758,6 @@ html {
 
 .mainContent {
   width: calc(100% - 15.625rem);
-  float: right;
   position: relative; }
   @media (max-width: 991.98px) {
     .mainContent {
@@ -7766,18 +7777,6 @@ html {
     visibility: visible;
     opacity: 1; }
 
-@media (max-width: 991.98px) {
-  .card-columns {
-    columns: 2; } }
-
-@media (max-width: 767.98px) {
-  .card-columns {
-    columns: 2; } }
-
-@media (max-width: 575.98px) {
-  .card-columns {
-    columns: 1; } }
-
 .footer {
   position: absolute;
   bottom: 1.25rem; }
@@ -7788,6 +7787,56 @@ html {
       color: #1FAD9F; }
   .footer__content__year {
     font-size: 0.875rem; }
+
+.mainContent__info {
+  padding: 7.875rem 0; }
+  .mainContent__info__owl {
+    position: relative; }
+    .mainContent__info__owl .owl-nav {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      margin-top: -3.125rem;
+      margin-left: -0.3125rem;
+      margin-right: -0.3125rem;
+      z-index: 3;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s all ease; }
+      .mainContent__info__owl .owl-nav .owl-prev,
+      .mainContent__info__owl .owl-nav .owl-next {
+        position: absolute;
+        background: #1FAD9F;
+        color: #fff;
+        padding: 1.25rem;
+        line-height: 0; }
+        .mainContent__info__owl .owl-nav .owl-prev > span,
+        .mainContent__info__owl .owl-nav .owl-next > span {
+          font-size: 3.125rem; }
+      .mainContent__info__owl .owl-nav .owl-prev {
+        left: 0; }
+      .mainContent__info__owl .owl-nav .owl-next {
+        right: 0; }
+    .mainContent__info__owl:hover .owl-nav {
+      visibility: visible;
+      opacity: 1; }
+    .mainContent__info__owl .owl-dots {
+      margin-top: 1.875rem;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center; }
+      .mainContent__info__owl .owl-dots .owl-dot {
+        width: 0.625rem;
+        height: 0.625rem;
+        background-color: #ced4da;
+        border-radius: 50%;
+        margin: 0.625rem 0.3125rem; }
+        .mainContent__info__owl .owl-dots .owl-dot.active {
+          background-color: #1FAD9F; }
+    .mainContent__info__owl__content {
+      padding: 1.5rem; }
 
 /*
  *  Owl Carousel - Core
@@ -7882,55 +7931,5 @@ html {
 /* No Js */
 .no-js .owl-carousel {
   display: block; }
-
-.mainContent__info {
-  padding: 7.875rem 0; }
-  .mainContent__info__owl {
-    position: relative; }
-    .mainContent__info__owl .owl-nav {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      left: 0;
-      margin-top: -3.125rem;
-      margin-left: -0.3125rem;
-      margin-right: -0.3125rem;
-      z-index: 3;
-      visibility: hidden;
-      opacity: 0;
-      transition: 0.3s all ease; }
-      .mainContent__info__owl .owl-nav .owl-prev,
-      .mainContent__info__owl .owl-nav .owl-next {
-        position: absolute;
-        background: #1FAD9F;
-        color: #fff;
-        padding: 1.25rem;
-        line-height: 0; }
-        .mainContent__info__owl .owl-nav .owl-prev > span,
-        .mainContent__info__owl .owl-nav .owl-next > span {
-          font-size: 3.125rem; }
-      .mainContent__info__owl .owl-nav .owl-prev {
-        left: 0; }
-      .mainContent__info__owl .owl-nav .owl-next {
-        right: 0; }
-    .mainContent__info__owl:hover .owl-nav {
-      visibility: visible;
-      opacity: 1; }
-    .mainContent__info__owl .owl-dots {
-      margin-top: 1.875rem;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: center;
-          justify-content: center; }
-      .mainContent__info__owl .owl-dots .owl-dot {
-        width: 0.625rem;
-        height: 0.625rem;
-        background-color: #ced4da;
-        border-radius: 50%;
-        margin: 0.625rem 0.3125rem; }
-        .mainContent__info__owl .owl-dots .owl-dot.active {
-          background-color: #1FAD9F; }
-    .mainContent__info__owl__content {
-      padding: 1.5rem; }
 
 /*# sourceMappingURL=all.css.map */
