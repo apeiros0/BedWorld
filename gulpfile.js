@@ -82,7 +82,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('copy', function () {
-  gulp.src(['./source/**/**', '!source/**/*.jade', '!source/**/*.html', '!source/scss/**/**'])
+  gulp.src(['./source/**/**', '!source/**/**.jade', '!source/scss/**/**', '!source/data/**/**'])
     .pipe(gulp.dest('./public/'))
     .pipe(browserSync.reload({
       stream: true
