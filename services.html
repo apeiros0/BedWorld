@@ -1,216 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <!-- shrink-to-fit 可以兼顧在 Firefox/Chrome/Safari/WebView 中都有同樣的排版，也不會在其他瀏覽器中發生問題 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Bed World - Services</title>
-    <link rel="shortcut icon" href="images/bed_icon.ico">
-
-    <meta name='description' content='買床！' />
-    <meta name='keywords' content='Bed, Bed World' />
-
-    <meta property="og:title" content="Bed World">
-    <meta property="og:description" content="買床！">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="">
-    <meta name="format-detection" content="telephone=no" />
-
-    <link rel="stylesheet" href="scss/all.css">
+    <link rel="shortcut icon" href="images/bed_icon.ico"/>
+    <meta name="description" content="買床！"/>
+    <meta name="keywords" content="Bed, Bed World"/>
+    <meta property="og:title" content="Bed World"/>
+    <meta property="og:description" content="買床！"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content=""/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="scss/all.css"/>
     <script src="https://kit.fontawesome.com/fface7bba9.js"></script>
-</head>
-
-<body>
-    <div class="hamburger__bar  d-lg-none  d-flex justify-content-center align-items-center">
-        <span class="hamburger__bar__btn  jq-hamburger__bar__btn  mb-0  pl-3"><i class="fas  fa-bars"></i></span>
-        <h2 class="aside__header__logo  mb-0  text-center  h1"><a href="index.html" class="d-block  p-2">Bed World</a>
-        </h2>
+  </head>
+  <body>
+    <div class="hamburger__bar d-lg-none d-flex justify-content-center align-items-center"><span class="hamburger__bar__btn jq-hamburger__bar__btn mb-0 pl-3"><i class="fas fa-bars"></i></span>
+      <h2 class="aside__header__logo mb-0 text-center h1"><a href="index.html" class="d-block p-2">Bed World</a></h2>
     </div>
-
-    <aside class="aside  jq-aside">
-        <div class="aside__close  d-block  d-lg-none  d-flex  justify-content-end  align-items-center">
-            <a href="#" class="aside__close__btn  jq-aside__close__btn  d-block  w-100  px-4  pt-4  text-right">
-                <i class="fas  fa-long-arrow-alt-left  mr-2"></i>
-                <span class="text-uppercase">Close</span>
-            </a>
+    <aside class="aside jq-aside">
+      <div class="aside__close d-block d-lg-none d-flex justify-content-end align-items-center"><a href="#" class="aside__close__btn jq-aside__close__btn d-block w-100 px-4 pt-4 text-right"><i class="fas fa-long-arrow-alt-left mr-2"></i><span class="text-uppercase">Close</span></a></div>
+      <header class="aside__header p-4">
+        <h2 class="aside__header__logo h1"><a href="index.html" class="d-block">Bed World</a></h2>
+        <p class="aside__header__content mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      </header>
+      <div class="aside__index pl-4">
+        <ul>
+              <li class="aside__index__item"><a href="index.html" class="aside__index__item__link">Home</a></li>
+              <li class="aside__index__item"><a href="about.html" class="aside__index__item__link">About</a></li>
+              <li class="aside__index__item"><a href="services.html" class="aside__index__item__link aside__index__item__link--active">Services</a></li>
+              <li class="aside__index__item"><a href="contact.html" class="aside__index__item__link">Contact</a></li>
+        </ul>
+      </div>
+      <footer class="footer p-4">
+        <ul class="footer__logo d-flex align-items-center">
+                  <li><a href="#" class="p-2"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#" class="p-2"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#" class="p-2"><i class="fab fa-facebook-square"></i></a></li>
+        </ul>
+        <div class="footer__content">
+          <p class="footer__content__year">© 2019 demo</p>
         </div>
-
-        <header class="aside__header p-4">
-            <!-- a 連結使用 d-block 是為了讓外框能點到 -->
-            <h2 class="aside__header__logo  h1"><a href="index.html" class="d-block">Bed World</a></h2>
-            <p class="aside__header__content  mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        </header>
-
-        <div class="aside__index pl-4">
-            <ul>
-                <li class="aside__index__item"><a href="index.html" class="aside__index__item__link ">Home</a></li>
-                <li class="aside__index__item"><a href="about.html" class="aside__index__item__link">About</a></li>
-                <li class="aside__index__item"><a href="services.html"
-                        class="aside__index__item__link  aside__index__item__link--active">Services</a>
-                </li>
-                <li class="aside__index__item"><a href="contact.html" class="aside__index__item__link">Contact</a></li>
-            </ul>
-        </div>
-
-        <footer class="footer p-4">
-            <ul class="footer__logo  d-flex  align-items-center">
-                <li><a href="#" class="p-2"><i class="fab  fa-twitter"></i></a></li>
-                <li><a href="#" class="p-2"><i class="fab  fa-instagram"></i></a></li>
-                <li><a href="#" class="p-2"><i class="fab  fa-facebook-square"></i></a></li>
-            </ul>
-
-            <div class="footer__content">
-                <p class="footer__content__year">© 2019 demo</p>
-            </div>
-        </footer>
+      </footer>
     </aside>
-
-    <main class="mainContent  jq-mainContent  ml-auto  p-3  p-lg-4  clearfix">
-
-        <div class="container-fluid">
-            <!-- about -->
-            <div class="row  justify-content-center">
-                <div class="col-xl-8  col-lg-12">
-                    <img class="img-fluid"
-                        src="https://images.unsplash.com/photo-1532634745-d438fed1a87e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                        alt="man and woman near commercial refrigerator">
-
-                    <div class="row  justify-content-center">
-                        <div class="col-xl-8  col-lg-12">
-                            <div class="mt-5">
-                                <h1 class="mb-3">Services</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores excepturi cumque
-                                    ipsa molestiae minus labore enim nemo error nihil aliquam recusandae harum
-                                    architecto nesciunt quidem eveniet, earum tenetur beatae delectus vitae quae
-                                    provident.</p>
-
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab nihil ea, corporis ipsa
-                                    ducimus ex laborum nesciunt totam optio in velit fugiat a pariatur sapiente expedita
-                                    voluptatum illo dicta? Odio sequi exercitationem facilis impedit tempore ipsum
-                                    sapiente?</p>
-                            </div>
-                        </div>
-                    </div>
+    <main class="mainContent jq-mainContent ml-auto p-3 p-lg-4 clearfix">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-12"><img src="https://images.unsplash.com/photo-1532634745-d438fed1a87e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="man and woman near commercial refrigerator" class="img-fluid"/>
+            <div class="row justify-content-center">
+              <div class="col-xl-8 col-lg-12">
+                <div class="mt-5">
+                  <h1 class="mb-3">Services</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores excepturi cumque
+                    ipsa molestiae minus labore enim nemo error nihil aliquam recusandae harum
+                    architecto nesciunt quidem eveniet, earum tenetur beatae delectus vitae quae
+                    provident.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores excepturi cumque
+                    ipsa molestiae minus labore enim nemo error nihil aliquam recusandae harum
+                    architecto nesciunt quidem eveniet, earum tenetur beatae delectus vitae quae
+                    provident.
+                  </p>
                 </div>
+              </div>
             </div>
-
-
-            <section class="mainContent__info">
-                <div class="row  justify-content-center">
-                    <div class="col-12  col-md-6  col-lg-4">
-                        <div class="mainContent__info__card  p-4  p-md-5  mb-4">
-                            <div class="mainContent__info__card__header">
-                                <i class="fas  fa-thumbs-up  fa-3x"></i>
-                            </div>
-                            <div class="mainContent__info__card__body  mt-3">
-                                <h4>Experience</h4>
-                                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
-                                    cumque!
-                                    Beatae
-                                    vero perspiciatis quam veritatis sequi, quia maiores mollitia.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12  col-md-6  col-lg-4">
-                        <div class="mainContent__info__card  p-4  p-md-5  mb-4">
-                            <div class="mainContent__info__card__header">
-                                <i class="fas fa-mug-hot  fa-3x"></i>
-                            </div>
-                            <div class="mainContent__info__card__body  mt-3">
-                                <h4>Relax</h4>
-                                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
-                                    cumque!
-                                    Beatae
-                                    vero perspiciatis quam veritatis sequi, quia maiores mollitia.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12  col-md-6  col-lg-4">
-                        <div class="mainContent__info__card  p-4  p-md-5  mb-4">
-                            <div class="mainContent__info__card__header">
-                                <i class="fas  fa-bed  fa-3x"></i>
-                            </div>
-                            <div class="mainContent__info__card__body  mt-3">
-                                <h4>Comfortable</h4>
-                                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
-                                    cumque!
-                                    Beatae
-                                    vero perspiciatis quam veritatis sequi, quia maiores mollitia.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12  col-md-6  col-lg-4">
-                        <div class="mainContent__info__card  p-4  p-md-5  mb-4">
-                            <div class="mainContent__info__card__header">
-                                <i class="fas  fa-dollar-sign  fa-3x"></i>
-                            </div>
-                            <div class="mainContent__info__card__body  mt-3">
-                                <h4>Buy 1 Get 1 Free</h4>
-                                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
-                                    cumque!
-                                    Beatae
-                                    vero perspiciatis quam veritatis sequi, quia maiores mollitia.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12  col-md-6  col-lg-4">
-                        <div class="mainContent__info__card  p-4  p-md-5  mb-4">
-                            <div class="mainContent__info__card__header">
-                                <i class="fas  fa-hands-helping  fa-3x"></i>
-                            </div>
-                            <div class="mainContent__info__card__body  mt-3">
-                                <h4>After Service</h4>
-                                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
-                                    cumque!
-                                    Beatae
-                                    vero perspiciatis quam veritatis sequi, quia maiores mollitia.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12  col-md-6  col-lg-4">
-                        <div class="mainContent__info__card  p-4  p-md-5  mb-4">
-                            <div class="mainContent__info__card__header">
-                                <i class="fas  fa-gift  fa-3x"></i>
-                            </div>
-                            <div class="mainContent__info__card__body  mt-3">
-                                <h4>Reward Card</h4>
-                                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
-                                    cumque!
-                                    Beatae
-                                    vero perspiciatis quam veritatis sequi, quia maiores mollitia.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          </div>
         </div>
-
-
-        <footer class="d-sm-none  px-3  py-2">
-            <ul class="footer__logo  d-flex  align-items-center">
-                <li><a href="#" class="p-2"><i class="fab  fa-twitter"></i></a></li>
-                <li><a href="#" class="p-2"><i class="fab  fa-instagram"></i></a></li>
-                <li><a href="#" class="p-2"><i class="fab  fa-facebook-square"></i></a></li>
-            </ul>
-
-            <div class="footer__content">
-                <p class="footer__content__year">© 2019 demo</p>
+        <section class="mainContent__info">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="mainContent__info__card p-4 p-md-5 mb-4">
+                <div class="mainContent__info__card__header"><i class="fas fa-thumbs-up fa-3x"></i></div>
+                <div class="mainContent__info__card__body mt-3">
+                  <h4>Experience</h4>
+                  <p class="mt-3">
+                    Experience ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
+                    cumque!
+                    Beatae
+                    vero perspiciatis quam veritatis sequi, quia maiores mollitia.  
+                  </p>
+                </div>
+              </div>
             </div>
-        </footer>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="mainContent__info__card p-4 p-md-5 mb-4">
+                <div class="mainContent__info__card__header"><i class="fas fa-mug-hot fa-3x"></i></div>
+                <div class="mainContent__info__card__body mt-3">
+                  <h4>Relax</h4>
+                  <p class="mt-3">
+                    Relax ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
+                    cumque!
+                    Beatae
+                    vero perspiciatis quam veritatis sequi, quia maiores mollitia.  
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="mainContent__info__card p-4 p-md-5 mb-4">
+                <div class="mainContent__info__card__header"><i class="fas fa-bed fa-3x"></i></div>
+                <div class="mainContent__info__card__body mt-3">
+                  <h4>Comfortable</h4>
+                  <p class="mt-3">
+                    Comfortable ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
+                    cumque!
+                    Beatae
+                    vero perspiciatis quam veritatis sequi, quia maiores mollitia.  
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="mainContent__info__card p-4 p-md-5 mb-4">
+                <div class="mainContent__info__card__header"><i class="fas fa-dollar-sign fa-3x"></i></div>
+                <div class="mainContent__info__card__body mt-3">
+                  <h4>Buy 1 Get 1 Free</h4>
+                  <p class="mt-3">
+                    Buy 1 Get 1 Free ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
+                    cumque!
+                    Beatae
+                    vero perspiciatis quam veritatis sequi, quia maiores mollitia.  
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="mainContent__info__card p-4 p-md-5 mb-4">
+                <div class="mainContent__info__card__header"><i class="fas fa-hands-helping fa-3x"></i></div>
+                <div class="mainContent__info__card__body mt-3">
+                  <h4>After Service</h4>
+                  <p class="mt-3">
+                    After Service ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
+                    cumque!
+                    Beatae
+                    vero perspiciatis quam veritatis sequi, quia maiores mollitia.  
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="mainContent__info__card p-4 p-md-5 mb-4">
+                <div class="mainContent__info__card__header"><i class="fas fa-gift fa-3x"></i></div>
+                <div class="mainContent__info__card__body mt-3">
+                  <h4>Reward Card</h4>
+                  <p class="mt-3">
+                    Reward Card ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
+                    cumque!
+                    Beatae
+                    vero perspiciatis quam veritatis sequi, quia maiores mollitia.  
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="d-sm-none px-3 py-2">
+        <ul class="footer__logo d-flex align-items-center">
+                  <li><a href="#" class="p-2"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#" class="p-2"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#" class="p-2"><i class="fab fa-facebook-square"></i></a></li>
+        </ul>
+        <div class="footer__content">
+          <p class="footer__content__year">© 2019 demo</p>
+        </div>
+      </footer>
     </main>
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/all.js"></script>
-</body>
-
+  </body>
 </html>
