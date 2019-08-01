@@ -20,13 +20,47 @@ gulp.task('clean', () => {
     .pipe($.clean());
 });
 
+
+gulp.task('jade', function () {
+  // var YOUR_LOCALS = {};
+
+  gulp.src('./source/**/*.jade')
+      .pipe($.plumber()) // 出錯時不會停止，會繼續執行 Gulp
+      // jade 編譯前取得資料
+      .pipe($.data(function () {
+          // 使用 require() 載入外部 .json 資料
+          var imgURL = require('./source/data/imgURL.json');
+          var linkList = require('./source/data/linkList.json');
+          var personList = require('./source/data/personList.json');
+          var bedList = require('./source/data/bedList.json');
+          var servicesList = require('./source/data/servicesList.json');
+
+          // 合併成物件
+          var source = {
+              'imgURL': imgURL,
+              'linkList': linkList,
+              'personList': personList,
+              'bedList': bedList,
+              "servicesList": servicesList
+          }
+          // console.log('jade', source); // 檢查是否有資料載入
+          return source; // 要回傳物件
+      }))
+      .pipe($.jade({
+          // locals: YOUR_LOCALS
+          pretty: true, // 編譯完的 HTML 將會展開 (沒有壓縮的版本)
+      }))
+      .pipe(gulp.dest('./public/'))
+      .pipe(browserSync.stream()); // 自動重新整理
+});
+
 gulp.task('vendorJs', function () {
   return gulp.src([
     './node_modules/jquery/dist/jquery.slim.min.js',
     './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
   ])
   .pipe($.concat('vendor.js'))
-  .pipe(gulp.dest('./public/javascripts'))
+  .pipe(gulp.dest('./public/js'))
 })
 
 gulp.task('sass', function () {
@@ -37,8 +71,8 @@ gulp.task('sass', function () {
       outputStyle: 'nested',
       includePaths: ['./node_modules/bootstrap/scss']
     })
-      .on('error', $.sass.logError))
-      .pipe($.postcss([autoprefixer()]))
+    .on('error', $.sass.logError))
+    .pipe($.postcss([autoprefixer()]))
     .pipe($.if(options.env === 'production', $.cleanCss()))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('./public/scss'))
@@ -48,7 +82,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('copy', function () {
-  gulp.src(['./source/**/**', '!source/scss/**/**'])
+  gulp.src(['./source/**/**', '!source/**/*.jade', '!source/**/*.html', '!source/scss/**/**'])
     .pipe(gulp.dest('./public/'))
     .pipe(browserSync.reload({
       stream: true
@@ -63,6 +97,7 @@ gulp.task('browserSync', function () {
 });
 
 gulp.task('watch', function () {
+  gulp.watch(['./source/**/*.jade'], ['jade']);
   gulp.watch(['./source/scss/**/*.sass', './source/scss/**/*.scss'], ['sass']);
   gulp.watch(['./source/**/**', '!/source/scss/**/**'], ['copy']);
 });
@@ -72,7 +107,7 @@ gulp.task('deploy', function () {
     .pipe($.ghPages());
 });
 
-gulp.task('sequence', gulpSequence('clean', 'copy', 'sass', 'vendorJs', 'sass'));
+gulp.task('sequence', gulpSequence('clean', 'copy', 'jade', 'sass', 'vendorJs', 'sass'));
 
-gulp.task('default', ['copy', 'sass', 'vendorJs', 'browserSync', 'watch']);
+gulp.task('default', ['copy', 'jade', 'sass', 'vendorJs', 'browserSync', 'watch']);
 gulp.task('build', ['sequence'])

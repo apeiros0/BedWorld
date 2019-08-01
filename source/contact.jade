@@ -1,0 +1,37 @@
+extend partials/layout.jade
+
+block head
+    -var path='contact.html'
+    include partials/head.jade
+    
+
+block aside
+    include partials/aside.jade
+
+
+
+block content
+    .container-fluid
+        // about
+        .row.justify-content-center
+            .col-xl-8.col-lg-12
+                img.img-fluid(src='https://images.unsplash.com/photo-1557200134-90327ee9fafa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80', alt='black laptop computer')
+                .row.justify-content-center
+                    .col-xl-8.col-lg-12
+                        .mt-5
+                            h1.mb-3 Contact
+                            form.mb-5
+                                .form-row
+                                    .form-group.col-md-6.input-group-lg
+                                        label(for='inputFirstName') First Name
+                                        input#inputFirstName.form-control(type='text')
+                                    .form-group.col-md-6.input-group-lg
+                                        label(for='inputLastName') Last Name
+                                        input#inputLastName.form-control(type='text')
+                                .form-group.input-group-lg
+                                    label(for='inputEmail') Email
+                                    input#inputEmail.form-control(type='email')
+                                .form-group.mb-4
+                                    label(for='inputMessage') Message
+                                    textarea#inputMessage.form-control(rows='9')
+                                button.btn.btn-primary.font-weight-bold.text-uppercase(type='submit') Send Message

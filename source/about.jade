@@ -1,0 +1,55 @@
+extend partials/layout.jade
+
+block head
+    -var path='about.html'
+    include partials/head.jade
+    
+
+block aside
+    include partials/aside.jade
+
+
+mixin p
+    p
+        | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab nihil ea, corporis ipsa
+        | ducimus ex laborum nesciunt totam optio in velit fugiat a pariatur sapiente expedita
+        | voluptatum illo dicta? Odio sequi exercitationem facilis impedit tempore ipsum
+        | sapiente?    
+
+mixin carousel(imgURL, name)
+    .item
+        img(src=imgURL, alt=name)
+        .mainContent__info__owl__content.border.border-top-0.border-light
+            h4 #{name}
+            p.mt-3
+                | The most effectual Top Cat! Who's intellectual close friends get to call him T.C.,
+                | providing it's with dignity. Top Cat! The indisputable leader of the gang.
+
+block content
+    //- 圖片占滿 col
+    .container-fluid
+        //- about
+        .row.justify-content-center
+            .col-xl-8.col-lg-12
+                img.img-fluid(src='https://images.unsplash.com/photo-1544582207-9bd1b74b1596?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80', alt='pillows on bed inside house')
+                .row.justify-content-center
+                    .col-xl-8.col-lg-12
+                        .mt-5
+                            h1.mb-3 About
+                            +p
+                            +p
+                            +p
+                            +p
+        section.mainContent__info
+            .container-fluid
+                .row.mb-5.justify-content-center
+                    .col-lg-8
+                        .row.justify-content-center
+                            .col-lg-8.col-12
+                                h2.h1.mb-5 The Team
+                .row
+                    .col-12
+                        //- item 小於 3 不會出現箭頭
+                        .mainContent__info__owl.owl-carousel
+                            each item in personList.list
+                                +carousel(item.url, item.name)

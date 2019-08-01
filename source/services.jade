@@ -1,0 +1,48 @@
+extend partials/layout.jade
+
+block head
+    -var path='services.html'
+    include partials/head.jade
+    
+
+block aside
+    -var path='services.html'
+    include partials/aside.jade
+
+
+mixin p
+    p
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores excepturi cumque
+        | ipsa molestiae minus labore enim nemo error nihil aliquam recusandae harum
+        | architecto nesciunt quidem eveniet, earum tenetur beatae delectus vitae quae
+        | provident.
+
+mixin card(name, icon)
+    .col-12.col-md-6.col-lg-4
+        .mainContent__info__card.p-4.p-md-5.mb-4
+            .mainContent__info__card__header
+                i(class=icon)
+            .mainContent__info__card__body.mt-3
+                h4 #{name}
+                p.mt-3
+                    | #{name} ipsum dolor sit amet consectetur adipisicing elit. Corporis, iusto
+                    | cumque!
+                    | Beatae
+                    | vero perspiciatis quam veritatis sequi, quia maiores mollitia.  
+
+
+block content
+    .container-fluid
+        .row.justify-content-center
+            .col-xl-8.col-lg-12
+                img.img-fluid(src='https://images.unsplash.com/photo-1532634745-d438fed1a87e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80', alt='man and woman near commercial refrigerator')
+                .row.justify-content-center
+                    .col-xl-8.col-lg-12
+                        .mt-5
+                            h1.mb-3 Services
+                            +p
+                            +p
+        section.mainContent__info
+            .row.justify-content-center
+                each item in servicesList.list
+                    +card(item.name, item.icon)

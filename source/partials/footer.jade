@@ -1,0 +1,13 @@
+mixin icon(className)
+    li
+        a.p-2(href='#')
+            i(class=className)
+
+
+ul.footer__logo.d-flex.align-items-center
+    +icon('fab fa-twitter')
+    +icon('fab fa-instagram')
+    +icon('fab fa-facebook-square')
+
+.footer__content
+    p.footer__content__year © 2019 demo

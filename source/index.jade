@@ -1,0 +1,21 @@
+extend partials/layout.jade
+
+block head
+    -var path='index.html'
+    include partials/head.jade
+
+block aside
+    include partials/aside.jade
+
+
+mixin card(link)
+    .card
+        a.imgRectangle(href='single.html')
+            img.card-img-top(src=link, alt='Card image cap')
+
+block content
+    h1.text-hide BED World
+    .card-columns
+        //- one column
+        each item in imgURL.imgList
+            +card(item.imgURL)

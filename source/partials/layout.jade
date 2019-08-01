@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        block head
+    body
+        include hamburgerBar.jade
+
+
+        block aside
+
+
+        main.mainContent.jq-mainContent.ml-auto.p-3.p-lg-4.clearfix
+            
+            block content
+
+            footer.d-sm-none.px-3.py-2
+                include footer.jade
+
+
+        script(src='https://code.jquery.com/jquery-3.4.1.min.js', integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=', crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js')
+        script(src='js/all.js')

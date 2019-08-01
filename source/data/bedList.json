@@ -1,0 +1,20 @@
+{
+    "list": [
+        {
+            "name": "Azure-Themed Bed",
+            "url": "https://images.unsplash.com/flagged/photo-1556438758-8d49568ce18e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+            "name": "White-Themed Bed",
+            "url": "https://images.unsplash.com/photo-1545060894-86c41d4aad6c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+            "name": "Brown-Themed Bed",
+            "url": "https://images.unsplash.com/photo-1538944495092-48fff71fbb0c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+            "name": "Modern-Themed Bed",
+            "url": "https://images.unsplash.com/photo-1558951813-20a72516b1b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+        }
+    ]
+}

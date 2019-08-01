@@ -1,0 +1,17 @@
+meta(charset='UTF-8')
+//- shrink-to-fit 可以兼顧在 Firefox/Chrome/Safari/WebView 中都有同樣的排版，也不會在其他瀏覽器中發生問題
+meta(name='viewport', content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+meta(http-equiv='X-UA-Compatible', content='ie=edge')
+each item in linkList.list
+    if(path === item.url)
+        title Bed World - #{item.name}
+link(rel='shortcut icon', href='images/bed_icon.ico')
+meta(name='description', content='買床！')
+meta(name='keywords', content='Bed, Bed World')
+meta(property='og:title', content='Bed World')
+meta(property='og:description', content='買床！')
+meta(property='og:type', content='website')
+meta(property='og:image', content='')
+meta(name='format-detection', content='telephone=no')
+link(rel='stylesheet', href='scss/all.css')
+script(src='https://kit.fontawesome.com/fface7bba9.js')

@@ -1,0 +1,26 @@
+mixin link(url, name)
+    if(path === url)
+        li.aside__index__item
+            a.aside__index__item__link.aside__index__item__link--active(href=url) #{name}
+    else
+        li.aside__index__item
+            a.aside__index__item__link(href=url) #{name}
+
+aside.aside.jq-aside
+    .aside__close.d-block.d-lg-none.d-flex.justify-content-end.align-items-center
+        a.aside__close__btn.jq-aside__close__btn.d-block.w-100.px-4.pt-4.text-right(href='#')
+            i.fas.fa-long-arrow-alt-left.mr-2
+            span.text-uppercase Close
+    header.aside__header.p-4
+        //- a 連結使用 d-block 是為了讓外框能點到
+        h2.aside__header__logo.h1
+            a.d-block(href='index.html') Bed World
+        p.aside__header__content.mb-0 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    .aside__index.pl-4
+        ul
+            each item in linkList.list
+                if(item.url !== "single.html")
+                    +link(item.url, item.name)
+                
+    footer.footer.p-4
+        include footer.jade

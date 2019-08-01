@@ -1,0 +1,28 @@
+{
+    "list": [
+        {
+            "name": "Experience",
+            "icon": "fas fa-thumbs-up fa-3x"
+        },
+        {
+            "name": "Relax",
+            "icon": "fas fa-mug-hot fa-3x"
+        },
+        {
+            "name": "Comfortable",
+            "icon": "fas fa-bed fa-3x"
+        },
+        {
+            "name": "Buy 1 Get 1 Free",
+            "icon": "fas fa-dollar-sign fa-3x"
+        },
+        {
+            "name": "After Service",
+            "icon": "fas fa-hands-helping fa-3x"
+        },
+        {
+            "name": "Reward Card",
+            "icon": "fas fa-gift fa-3x"
+        }
+    ]
+}

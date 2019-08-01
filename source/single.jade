@@ -1,0 +1,58 @@
+extend partials/layout.jade
+
+block head
+    -var path='single.html'
+    include partials/head.jade
+    
+
+block aside
+    -var path='single.html'
+    include partials/aside.jade
+
+
+mixin p
+    p
+        | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab nihil ea, corporis ipsa
+        | ducimus ex laborum nesciunt totam optio in velit fugiat a pariatur sapiente expedita
+        | voluptatum illo dicta? Odio sequi exercitationem facilis impedit tempore ipsum
+        | sapiente?    
+
+mixin carousel(imgURL, name)
+    .item
+        img(src=imgURL, alt=name)
+        .mainContent__info__owl__content.border.border-top-0.border-light
+            h4 #{name}
+            p.mt-3
+                | Donec tempor porta enim a porttitor. Phasellus eu nibh venenatis, egestas sapien ornare, ullamcorper lorem. Donec fermentum libero eget tincidunt euismod. 
+                | Curabitur id dui in odio venenatis cursus quis non dui.
+
+
+block content
+    //- 圖片占滿 col
+    .container-fluid
+        //- about
+        .row.justify-content-center
+            .col-xl-8.col-lg-12
+                img.img-fluid(src='https://images.unsplash.com/photo-1553444836-bc6c8d340ba7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80', alt='white bedspread inside room')
+                .row.justify-content-center
+                    .col-xl-8.col-lg-12
+                        .mt-5
+                            h1.mb-3 Information
+                            +p
+                            +p
+                            +p
+                            +p
+        section.mainContent__info
+            .container-fluid
+                .row.mb-5.justify-content-center
+                    .col-lg-8
+                        .row.justify-content-center
+                            .col-lg-8.col-12
+                                h2.h1.mb-5 Related Bed
+                .row
+                    .col-12
+                        //- item 小於 3 不會出現箭頭
+                        .mainContent__info__owl.owl-carousel
+                            each item in bedList.list
+                                +carousel(item.url, item.name)
+    
