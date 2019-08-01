@@ -20,11 +20,11 @@ gulp.task('clean', () => {
     .pipe($.clean());
 });
 
-
 gulp.task('jade', function () {
   // var YOUR_LOCALS = {};
 
-  gulp.src('./source/**/*.jade')
+  // !(_)* 不等於 ! 的 .jade 會被編譯
+  gulp.src('./source/**/!(_)*.jade')
       .pipe($.plumber()) // 出錯時不會停止，會繼續執行 Gulp
       // jade 編譯前取得資料
       .pipe($.data(function () {
@@ -82,12 +82,30 @@ gulp.task('sass', function () {
 });
 
 gulp.task('copy', function () {
-  gulp.src(['./source/**/**', '!source/**/**.jade', '!source/scss/**/**', '!source/data/**/**'])
+  gulp.src(['./source/images/**/**'])
     .pipe(gulp.dest('./public/'))
     .pipe(browserSync.reload({
       stream: true
     }));
 });
+
+gulp.task('babel', () =>
+    gulp.src('./source/js/**/*.js')
+        .pipe($.plumber())
+        .pipe($.sourcemaps.init())
+        .pipe($.babel({
+            presets: ['@babel/env']
+        }))
+        .pipe($.concat('all.js')) // 合併檔案 $.concat('合併的檔案名稱')
+        .pipe($.if(options.env === 'production', $.uglify({
+            compress: {
+                drop_console: true, // 清除 console.log
+            }
+        }))) // 接在合併完檔案 (已編譯完成) 後
+        .pipe($.sourcemaps.write('.'))
+        .pipe(gulp.dest('./public/js/'))
+        .pipe(browserSync.stream()) // 自動重新整理
+);
 
 gulp.task('browserSync', function () {
   browserSync.init({
@@ -99,15 +117,21 @@ gulp.task('browserSync', function () {
 gulp.task('watch', function () {
   gulp.watch(['./source/**/*.jade'], ['jade']);
   gulp.watch(['./source/scss/**/*.sass', './source/scss/**/*.scss'], ['sass']);
-  gulp.watch(['./source/**/**', '!/source/scss/**/**'], ['copy']);
+  // gulp.watch(['./source/**/**', '!/source/scss/**/**'], ['copy']);
 });
+
+gulp.task('image-min', () =>
+    gulp.src('./source/images/*')
+        .pipe($.if(options.env === 'production',$.imagemin()))
+        .pipe(gulp.dest('./public/images'))
+);
 
 gulp.task('deploy', function () {
   return gulp.src('./public/**/*')
     .pipe($.ghPages());
 });
 
-gulp.task('sequence', gulpSequence('clean', 'copy', 'jade', 'sass', 'vendorJs', 'sass'));
+gulp.task('sequence', gulpSequence('clean', 'babel', 'jade', 'sass', 'vendorJs', 'image-min'));
 
-gulp.task('default', ['copy', 'jade', 'sass', 'vendorJs', 'browserSync', 'watch']);
+gulp.task('default', ['copy', 'babel', 'jade', 'sass', 'vendorJs', 'browserSync', 'watch']);
 gulp.task('build', ['sequence'])
