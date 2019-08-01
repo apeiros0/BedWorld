@@ -1,0 +1,2 @@
+"use strict";$(document).ready(function(){$(".jq-hamburger__bar__btn").on("click",function(){$(".jq-aside").addClass("aside--appear"),$(".jq-mainContent").addClass("mainContent--close")}),$(".jq-aside__close__btn, .jq-mainContent").on("click",function(){$(".jq-aside").removeClass("aside--appear"),$(".jq-mainContent").removeClass("mainContent--close")}),$(".owl-carousel").owlCarousel({loop:!0,margin:10,nav:!0,navElement:"div",responsive:{0:{items:1},768:{items:2},992:{items:3}}})});
+//# sourceMappingURL=all.js.map
